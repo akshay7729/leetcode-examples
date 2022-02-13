@@ -1,0 +1,12 @@
+// solution 1
+const twoSum = (nums, target) => {
+  for (let i = 0; i < nums.length; i++) {
+    for (let j = 0; j < i; j++) {
+      if (nums[i] + nums[j] === target) {
+        return [j, i];
+      }
+    }
+  }
+};
+
+console.log(twoSum([7, 1, 11, 15], 12));
