@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Rotation on Hover</title>
+    <style>
+      #rotateImage {
+        transition: transform 1s;
+      }
+
+      #rotateImage.rotate {
+        transform: rotate(180deg);
+      }
+    </style>
+  </head>
+  <body>
+    <img
+      id="rotateImage"
+      src="https://ucarecdn.com/05f649bf-b70b-4cf8-90f7-2588ce404a08/"
+      alt="Image to rotate"
+      width="400"
+    />
+    <script type="text/javascript">
+      const image = document.getElementById("rotateImage");
+
+      image.addEventListener("mouseover", function () {
+        image.classList.add("rotate");
+      });
+
+      image.addEventListener("mouseout", function () {
+        image.classList.remove("rotate");
+      });
+    </script>
+  </body>
+</html>
